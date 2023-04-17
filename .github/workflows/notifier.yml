@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: send custom message
-      uses: ${{ github.action_repository }}
+      uses: actions/checkout@v3
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          ${{ github.actor }} ${{ github.event_name }} event to the ${{ github.action_repository }}.
+          ${{github.actor }}: ${{ github.event_name }} to the ${{ github.repository }}.
