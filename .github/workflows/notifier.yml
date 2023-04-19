@@ -11,7 +11,7 @@ jobs:
   notifyTelegram:
     runs-on: ubuntu-latest
     steps:
-    - name: send custom message
+    - name: DevTeam - Brain Ring - Notification to the Telegram chat
       uses: actions/checkout@v3
       with:
         to: ${{ secrets.TELEGRAM_TO }}
